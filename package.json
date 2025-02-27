@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "uglifycss": "*"
+  },
+  "scripts": {
+    "minify-css": "uglifycss design/css/markdownut.css > design/css/markdownut.min.css"
+  }
+}

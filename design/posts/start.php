@@ -1,10 +1,11 @@
 <?php
-require_once 'functions.php';
+require_once __DIR__ . '/../../functions.php';
 $config = getConfig();
 $slug = $_GET['slug'] ?? '';
 $post = getPost($slug);
 if (!$post) {
-    die('Post not found');
+    header('Location: /');
+    exit;
 }
 $adjacentPosts = getPreviousNextPosts($slug);
 ?>
